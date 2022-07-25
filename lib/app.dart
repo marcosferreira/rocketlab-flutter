@@ -20,10 +20,12 @@ class App extends StatelessWidget {
 
   ThemeData _themeData() {
     return ThemeData(
+      primarySwatch: Colors.grey,
       primaryColor: const Color(0xFF00875F),
       scaffoldBackgroundColor: const Color(0xff121214),
       backgroundColor: const Color(0xff121214),
       focusColor: const Color(0xff00B37E),
+      iconTheme: const IconThemeData(color: Color(0xff7C7C8A)),
       appBarTheme: const AppBarTheme(
         color: Color(0xff202024),
         elevation: 0,
@@ -33,6 +35,9 @@ class App extends StatelessWidget {
           backgroundColor: MaterialStateProperty.all<Color>(
             const Color(0xFF00875F),
           ),
+          foregroundColor: MaterialStateProperty.all<Color>(
+            Colors.white,
+          ),
         ),
       ),
       textTheme: const TextTheme(
@@ -41,7 +46,18 @@ class App extends StatelessWidget {
         bodyText1: TextStyle(color: Colors.white),
         bodyText2: TextStyle(color: Colors.white),
       ),
-      iconTheme: const IconThemeData(color: Color(0xff7C7C8A)),
+      cardTheme: const CardTheme(
+        color: Color(0xff202024),
+        elevation: 0,
+        margin: EdgeInsets.symmetric(
+          vertical: 9,
+          horizontal: 0,
+        ),
+      ),
+      listTileTheme: const ListTileThemeData(
+        textColor: Color(0xffE1E1E6),
+        iconColor: Color(0xffE1E1E6),
+      ),
       inputDecorationTheme: const InputDecorationTheme(
         hintStyle: TextStyle(color: Color(0xff7C7C8A)),
         fillColor: Colors.white,

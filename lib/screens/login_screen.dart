@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:phosphor_flutter/phosphor_flutter.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -40,13 +41,13 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 _inputWidget(
                   context,
-                  const Icon(Icons.email),
+                  const Icon(PhosphorIcons.envelope),
                   'E-mail',
                   emailController,
                 ),
                 _inputWidget(
                   context,
-                  const Icon(Icons.key),
+                  const Icon(PhosphorIcons.key),
                   'Senha',
                   passwordController,
                 ),
